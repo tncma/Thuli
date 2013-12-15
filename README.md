@@ -20,3 +20,6 @@ Other *WIP features* include:
   - Analytics:
     - Average *Thuli* resolution time
     - Leaderboard among municipalities on different parameters: Resolution time, First response time to a *Thuli* with sufficient vote ups.
+
+Link to web App:
+http://thulidev.devcloud.acquia-sites.com/

@@ -1,0 +1,7 @@
+Steps to Add new DB Table
+
+	1. Create a new class under Table package with required projection and other constants
+	2. Add the corresponding create SQL in SparkSqlOpenHelper under onCreate or onUpdate
+	3. Create IDs for that Table in SparkTableIds.java
+	4. Add HashMap variable for the newly created Table in SparkProvider.java
+	5. And finally initialize the HashMap variable under the static block in SparkProvider.java 

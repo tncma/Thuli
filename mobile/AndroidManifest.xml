@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hackathon.cma.spark"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="19" />
+    
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+     
+     <permission android:name="com.example.gcm.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
+     
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+         >
+        <provider
+            android:name="com.hackathon.cma.spark.db.SparkProvider"
+            android:authorities="com.hackathon.cma.spark.db.SparkProvider"
+            android:exported="false" >
+        </provider>
+
+        <activity
+            android:name="com.hackathon.cma.spark.main.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".main.CreateSparkActivity" android:label="@string/app_name"></activity>
+               
+        <receiver
+            android:name=".GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".GcmIntentService" />
+        <service android:name="com.hackathon.cma.spark.services.ServiceHelper"></service>
+        
+    </application>
+
+</manifest>

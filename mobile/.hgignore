@@ -1,0 +1,10 @@
+project.properties
+libs/android-support-v4.jar
+forget
+bin/*
+bin/*.*
+gen/*
+gen/*.*
+syntax: glob
+*.class
+.DS_Store

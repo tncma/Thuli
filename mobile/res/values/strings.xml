@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Thuli</string>
+    <string name="title_spark_detail">Thuligal</string>
+    <string name="action_settings">Settings</string>
+	<string name="anonymous">Anonymous</string>
+	<string name="request_failed">Request failed. Please try again later</string>
+	<string name="send">Send</string>
+	<string name="new_thuli">Add Thuli</string>
+	<string name="no_camera">Taking pictures is not supported in this device</string>
+	
+	<string name="enter_subject">Enter subject</string>
+	<string name="subject_error">Must specify a subject</string>
+	<string name="enter_body">Enter content</string>
+	<string name="body_error">Must specify content</string>
+
+</resources>

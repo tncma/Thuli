@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/thuliSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/enter_subject"
+        android:padding="5dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/thuliBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="4" />
+
+    <ImageButton
+        android:id="@+id/thuliImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="3dp"
+        android:src="@drawable/default_pic" />
+
+<!--     <com.hackathon.cma.spark.utils.FontAwesomeView
+        android:id="@+id/thuliLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="3dp"
+        android:text="@string/location"
+        android:textAppearance="?android:attr/textAppearanceLarge" /> -->
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+name = Services Entity
+description = Exposes entities to the Service API.
+package = Services
+core = 7.x
+dependencies[] = services
+dependencies[] = entity
+
+files[] = tests/services_entity.test
+files[] = plugins/services_entity_interface.inc
+files[] = plugins/services_entity_resource.inc
+files[] = plugins/services_entity_resource_clean.inc
+files[] = plugins/services_entity_resource_recurse.inc
+
+configure = admin/structure/services/entity
+
+; Information added by  packaging script on 2013-11-12
+version = "7.x-2.0-alpha6"
+core = "7.x"
+project = "services_entity"
+datestamp = "1384271016"
+

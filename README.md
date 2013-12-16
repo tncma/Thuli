@@ -22,7 +22,7 @@ Technology
 
 - **Web**
 
-  The web (server) component of the application runs off the latest version of Drupal 7!
+  The web component of the application runs off the latest version of Drupal 7!
   
   Drupal is a good fit for this web app because it is both enough of a web framework to build on easily and has several components (either core or contributed) that add a lot of relevant features out of the box. Besides, it is multi-role capable, has a flexible permissions and access control system and is configuration-rich which is quite handy for the administrative component. It also helps that the software is open-source, highly popular and is backed by an excellent community.
 
@@ -43,13 +43,16 @@ Installation
 
   Thuli is a Drupal installation profile by itself. So, if you'd be installing the site from the UI, you can just choose the profile as *Thuli* in the first page and then proceed as you would [normally install any other Drupal site](https://drupal.org/documentation/install/beginners).
 
-  If you are using `drush`, you can execute the following command and you'll be done! Navigate to the URL of the site and login with the username `admin` and password `admin`:
+  If you are using `drush`, you can execute the following command and you'll be done!
 
       drush si thuli 
         --db-url="mysql://dbuser:dbpass@dbhost/dbname"
         --account-name="admin"
         --account-pass="admin"
+        --site-name="Thuli"
         --verbose
+
+  Navigate to the URL of the site and login with the username `admin` and password `admin`.
 
 - **Mobile**
 

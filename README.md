@@ -8,14 +8,18 @@ Thuli comprises of two components right now:
   - An Android mobile app (for citizens for anytime anywhere access)
 
 Other *WIP features* include:
-  - Geotagging the posted Thuli automatically by the user's location (when using the mobile app)
   - Points, Leaderboard & Offers (to incentivize citizens & sustain their interest)
   - Allows citizens to take ownership of *Thulis* themselves. Allows organizations to place micro-bids.
   - Allows posting anonymously and for officials and the poster to have a private comment stream.
   - Allows officials to configure rules around managing Thulis & adding more custom attributes to individual thulis as their need may be (eg. Ward)
 
 *Wishlist*:
+  - Geotagging the posted *Thuli* automatically by the user's location (when using the mobile app)
+  - Push notifications for every change of state of a *Thuli* to all stakeholders (poster, people who voted up, government officials)
   - Delegated authentication using the e-version of Aadar ID, maybe
   - Analytics:
-    - Average Thuli resolution time
+    - Average *Thuli* resolution time
     - Leaderboard among municipalities on different parameters: Resolution time, First response time to a *Thuli* with sufficient vote ups.
+
+Link to web App:
+http://thulidev.devcloud.acquia-sites.com/

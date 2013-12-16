@@ -9,44 +9,48 @@
 ?>
 
 <div id="page">
-
   <header class="header navbar navbar-default navbar-fixed-top" id="header" role="banner">
-
-    <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
-    <?php endif; ?>
-
-    <?php if ($site_name || $site_slogan): ?>
-      <div class="header__name-and-slogan navbar-brand" id="name-and-slogan">
-        <?php if ($site_name): ?>
-          <h1 class="header__site-name" id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
-            <?php if ($site_slogan): ?>
-              <span class="header__site-slogan small" id="site-slogan"><?php print $site_slogan; ?></span>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#secondary-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <?php if ($logo): ?>
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
+        <?php endif; ?>
+        <?php if ($site_name || $site_slogan): ?>
+          <div class="header__name-and-slogan" id="name-and-slogan">
+            <?php if ($site_name): ?>
+              <h1 class="header__site-name navbar-brand clearfix" id="site-name">
+                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link pull-left" rel="home"><span><?php print $site_name; ?></span></a>
+                <?php if ($site_slogan): ?>
+                  <span class="header__site-slogan small pull-left hidden-xs" id="site-slogan"><?php print $site_slogan; ?></span>
+                <?php endif; ?>
+              </h1>
             <?php endif; ?>
-          </h1>
+          </div>
         <?php endif; ?>
       </div>
-    <?php endif; ?>
-
-    <?php if ($secondary_menu): ?>
-      <nav class="header__secondary-menu pull-right navbar-nav" id="secondary-menu" role="navigation">
-        <?php print theme('links__system_secondary_menu', array(
-          'links' => $secondary_menu,
-          'attributes' => array(
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => $secondary_menu_heading,
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
-      </nav>
-    <?php endif; ?>
-
-    <?php print render($page['header']); ?>
-
+      <?php if ($secondary_menu): ?>
+        <nav class="header__secondary-menu collapse navbar-collapse" id="secondary-menu" role="navigation">
+          <?php print theme('links__system_secondary_menu', array(
+            'links' => $secondary_menu,
+            'attributes' => array(
+              'class' => array('links', 'inline', 'clearfix', 'nav', 'navbar-nav', 'navbar-right'),
+            ),
+            'heading' => array(
+              'text' => $secondary_menu_heading,
+              'level' => 'h2',
+              'class' => array('element-invisible'),
+            ),
+          )); ?>
+        </nav>
+      <?php endif; ?>
+      <?php print render($page['header']); ?>
+    </div>
   </header>
 
   <div id="main">

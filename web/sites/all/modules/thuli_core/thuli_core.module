@@ -8,7 +8,7 @@
  * Implements hook_custom_theme().
  */
 function thuli_core_custom_theme() {
-  if (drupal_match_path(current_path(), "thulis/manage\nthulis/explore\nleaderboard\nmy-thulis")) {
+  if (drupal_match_path(current_path(), "thulis/manage\nthulis/explore\nleaderboard\nmy-thulis\nuser\nuser/*\nnode/add/thuli")) {
     return 'thuli_theme';
   }
 }

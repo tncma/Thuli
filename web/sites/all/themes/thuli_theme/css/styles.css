@@ -21,10 +21,11 @@
 /* @import "theme-A.css"; */
 /* @import "theme-B.css"; */
 
-#secondary-menu {
-    margin-top: 1em;
+#main {
+    margin-top: 2em;
 }
 
-#main {
-    margin-top: 5em;
+.header__site-slogan {
+    margin-top: 0.5em;
+    margin-left: 0.5em;
 }

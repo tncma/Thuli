@@ -9,7 +9,7 @@
 ?>
 
 <div id="page">
-  <header class="header navbar navbar-default navbar-inverse" id="header" role="banner">
+  <header class="header navbar navbar-default navbar-fixed-top navbar-inverse" id="header" role="banner">
     <div class="container">
       <div class="navbar-header">
         <?php if ($secondary_menu): ?>

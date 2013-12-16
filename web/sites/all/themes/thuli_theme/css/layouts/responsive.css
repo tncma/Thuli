@@ -63,13 +63,18 @@
   clear: both;
 }
 
+#main {
+    /* Move all the children of #main down to make room. */
+    padding-top: 5em;
+    position: relative;
+}
+
+#footer {
+    padding-top: 1em;
+}
+
 /* Navigation bar */
 @media all and (min-width: 480px) {
-  #main {
-    /* Move all the children of #main down to make room. */
-    padding-top: 3em;
-    position: relative;
-  }
   #navigation {
     /* Move the navbar up inside #main's padding. */
     position: absolute;

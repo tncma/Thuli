@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * Implements thuli_install().
+ */
+function thuli_install() {
+  $front_page_settings = array();
+  $role = user_role_load_by_name('junior officer');
+  $front_page_settings[] =
+      array(
+        'rid' => $role->rid,
+        'mode' => 'redirect',
+        'data' => 'thulis/manage'
+      );
+  $role = user_role_load_by_name('senior officer');
+  $front_page_settings[] =
+      array(
+        'rid' => $role->rid,
+        'mode' => 'redirect',
+        'data' => 'thulis/manage'
+      );
+  $role = user_role_load_by_name('citizen');
+  $front_page_settings[] =
+      array(
+        'rid' => $role->rid,
+        'mode' => 'redirect',
+        'data' => 'thulis/explore'
+      );
+  foreach ($front_page_settings as $setting) {
+    try {
+      drupal_write_record('front_page', $setting);
+    } catch (PDOException $e) {
+      db_update('front_page')->fields($setting)->execute();
+    }
+  }
+
+  // Enable zen, shiny, thuli_theme themes
+  // Disable bartik
+  db_update('system')
+      ->fields(array(
+        'status' => 1
+      ))
+      ->condition('type', 'theme')
+      ->condition('name', array('zen', 'shiny', 'thuli_theme'))
+      ->execute();
+  db_update('system')
+    ->fields(array('status' => 0))
+    ->condition('type', 'theme')
+    ->condition('name', 'bartik')
+    ->execute();
+
+  // Set shiny as the base & admin themes.
+  variable_set('theme_default', 'shiny');
+  variable_set('admin_theme', 'shiny');
+
+  // Create the "Userpoints" vocabulary.
+  userpoints_get_vid();
+}

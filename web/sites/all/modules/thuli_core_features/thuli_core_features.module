@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Thuli Core Features feature.
+ */
+
+include_once 'thuli_core_features.features.inc';

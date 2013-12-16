@@ -1,0 +1,7 @@
+name = Thuli
+description = A transparent communication platform to connect citizens and the government.
+version = 7.x-1.0-dev
+core = 7.x
+
+dependencies[] = thuli_core
+dependencies[] = thuli_core_features

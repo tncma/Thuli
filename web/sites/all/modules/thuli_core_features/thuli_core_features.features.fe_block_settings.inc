@@ -22,16 +22,16 @@ function thuli_core_features_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'shiny' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'shiny',
-        'weight' => -9,
+        'weight' => 0,
       ),
       'thuli_theme' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'thuli_theme',
-        'weight' => -9,
+        'weight' => 0,
       ),
       'zen' => array(
         'region' => '',
@@ -54,14 +54,14 @@ function thuli_core_features_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'shiny' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'help',
+        'status' => 1,
         'theme' => 'shiny',
         'weight' => 5,
       ),
       'thuli_theme' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'help',
+        'status' => 1,
         'theme' => 'thuli_theme',
         'weight' => 5,
       ),
@@ -89,13 +89,13 @@ function thuli_core_features_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'shiny',
-        'weight' => -8,
+        'weight' => 0,
       ),
       'thuli_theme' => array(
         'region' => 'content',
         'status' => 1,
         'theme' => 'thuli_theme',
-        'weight' => -8,
+        'weight' => 0,
       ),
       'zen' => array(
         'region' => 'content',
@@ -121,13 +121,13 @@ function thuli_core_features_default_fe_block_settings() {
         'region' => 'footer',
         'status' => 1,
         'theme' => 'shiny',
-        'weight' => -9,
+        'weight' => 10,
       ),
       'thuli_theme' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'footer',
+        'status' => 1,
         'theme' => 'thuli_theme',
-        'weight' => -9,
+        'weight' => 10,
       ),
       'zen' => array(
         'region' => '',

@@ -9,15 +9,17 @@
 ?>
 
 <div id="page">
-  <header class="header navbar navbar-default navbar-fixed-top" id="header" role="banner">
+  <header class="header navbar navbar-default navbar-inverse" id="header" role="banner">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#secondary-menu">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        <?php if ($secondary_menu): ?>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#secondary-menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <?php endif; ?>
         <?php if ($logo): ?>
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
         <?php endif; ?>
@@ -25,6 +27,7 @@
           <div class="header__name-and-slogan" id="name-and-slogan">
             <?php if ($site_name): ?>
               <h1 class="header__site-name navbar-brand clearfix" id="site-name">
+                <span class="glyphicon glyphicon-tint pull-left"></span>
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link pull-left" rel="home"><span><?php print $site_name; ?></span></a>
                 <?php if ($site_slogan): ?>
                   <span class="header__site-slogan small pull-left hidden-xs" id="site-slogan"><?php print $site_slogan; ?></span>
@@ -75,7 +78,6 @@
     </div>
 
     <div id="navigation">
-
       <?php if ($main_menu): ?>
         <nav id="main-menu" role="navigation" tabindex="-1">
           <?php
@@ -96,9 +98,7 @@
           )); ?>
         </nav>
       <?php endif; ?>
-
       <?php print render($page['navigation']); ?>
-
     </div>
 
     <?php

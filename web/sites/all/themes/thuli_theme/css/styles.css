@@ -21,11 +21,25 @@
 /* @import "theme-A.css"; */
 /* @import "theme-B.css"; */
 
-#main {
-    margin-top: 2em;
-}
-
 .header__site-slogan {
     margin-top: 0.5em;
     margin-left: 0.5em;
+}
+
+.header__site-link:link, .header__site-link:visited {
+    color: inherit;
+}
+
+/* Accomodate the admin menu at the top */
+.admin-menu .navbar-fixed-top {
+    top: 20px;
+}
+
+#admin-menu .dropdown {
+    z-index: 1031;
+}
+
+#admin-menu .dropdown .admin-menu-icon img {
+    height: 16px;
+    width: 16px;
 }

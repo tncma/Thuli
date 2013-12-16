@@ -597,41 +597,6 @@ function thuli_core_features_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'javascript_parsed';
-  $strongarm->value = array(
-    0 => 'misc/drupal.js',
-    1 => 'sites/all/modules/jquery_update/replace/jquery/1.5/jquery.min.js',
-    2 => 'misc/jquery.once.js',
-    3 => 'sites/all/modules/features/features.js',
-    4 => 'misc/tableheader.js',
-    5 => 'misc/form.js',
-    6 => 'misc/vertical-tabs.js',
-    7 => 'sites/all/modules/admin_menu/admin_menu.js',
-    'refresh:ta' => 'waiting',
-    8 => 'misc/collapse.js',
-    9 => 'misc/autocomplete.js',
-    10 => 'sites/all/modules/jquery_update/replace/ui/external/jquery.cookie.js',
-    11 => 'sites/all/modules/jquery_update/replace/misc/jquery.form.min.js',
-    12 => 'misc/progress.js',
-    13 => 'misc/ajax.js',
-    14 => 'sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js',
-    15 => 'sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min.js',
-    16 => 'sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min.js',
-    17 => 'sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min.js',
-    18 => 'sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min.js',
-    19 => 'sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.position.min.js',
-    20 => 'sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min.js',
-    21 => 'sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min.js',
-    22 => 'modules/block/block.js',
-    23 => 'misc/tabledrag.js',
-    24 => 'sites/all/themes/thuli_theme/bootstrap/js/bootstrap.min.js',
-    25 => 'sites/all/themes/thuli_theme/js/script.js',
-  );
-  $export['javascript_parsed'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'jquery_update_compression_type';
   $strongarm->value = 'min';
   $export['jquery_update_compression_type'] = $strongarm;
@@ -647,7 +612,7 @@ function thuli_core_features_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'jquery_update_jquery_version';
-  $strongarm->value = '1.5';
+  $strongarm->value = '1.7';
   $export['jquery_update_jquery_version'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2475,15 +2440,6 @@ function thuli_core_features_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'rules_event_whitelist';
-  $strongarm->value = array(
-    'node_update--thuli' => 0,
-  );
-  $export['rules_event_whitelist'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'save_continue_bid';
   $strongarm->value = 'Save and add fields';
   $export['save_continue_bid'] = $strongarm;
@@ -2534,7 +2490,7 @@ function thuli_core_features_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_name';
-  $strongarm->value = 'Site-Install';
+  $strongarm->value = 'Thuli';
   $export['site_name'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2624,8 +2580,8 @@ function thuli_core_features_strongarm() {
     'favicon_path' => '',
     'favicon_upload' => '',
     'zen_breadcrumb' => 'yes',
-    'zen_breadcrumb_separator' => ' › ',
-    'zen_breadcrumb_home' => 0,
+    'zen_breadcrumb_separator' => ' ',
+    'zen_breadcrumb_home' => 1,
     'zen_breadcrumb_trailing' => 0,
     'zen_breadcrumb_title' => 0,
     'zen_skip_link_anchor' => 'main-menu',

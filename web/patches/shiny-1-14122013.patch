@@ -1,6 +1,6 @@
-diff -r b49625c22dc9 sites/all/themes/shiny/template.php
---- a/sites/all/themes/shiny/template.php	Sat Dec 14 20:52:29 2013 +0530
-+++ b/sites/all/themes/shiny/template.php	Sat Dec 14 21:42:24 2013 +0530
+diff -r b49625c22dc9 web/sites/all/themes/shiny/template.php
+--- a/web/sites/all/themes/shiny/template.php	Sat Dec 14 20:52:29 2013 +0530
++++ b/web/sites/all/themes/shiny/template.php	Sat Dec 14 21:42:24 2013 +0530
 @@ -112,7 +112,7 @@
      return '<div class="breadcrumb clearfix">' . implode($sep, $variables['breadcrumb']) . '</div>';
    }

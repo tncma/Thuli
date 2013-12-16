@@ -1,0 +1,18 @@
+diff --git a/web/sites/all/modules/jquery_update/replace/misc/1.7/states.js b/web/sites/all/modules/jquery_update/replace/misc/1.7/states.js
+index d934372..04c26c6 100644
+--- a/web/sites/all/modules/jquery_update/replace/misc/1.7/states.js
++++ b/web/sites/all/modules/jquery_update/replace/misc/1.7/states.js
+@@ -287,10 +287,12 @@ states.Trigger.states = {
+ states.State = function(state) {
+   // We may need the original unresolved name later.
+   this.pristine = this.name = state;
++  // We are counting on our name being a string
++  this.name = this.name.toString();
+ 
+   // Normalize the state name.
+   while (true) {
+-    // Iteratively remove exclamation marks and invert the value.
++    // Iteratively remove exclamation marks and invert the value
+     while (this.name.charAt(0) == '!') {
+       this.name = this.name.substring(1);
+       this.invert = !this.invert;

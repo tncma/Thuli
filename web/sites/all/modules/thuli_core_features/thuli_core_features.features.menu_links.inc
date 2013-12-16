@@ -35,6 +35,7 @@ function thuli_core_features_menu_default_menu_links() {
     'link_title' => 'Leaderboard',
     'options' => array(
       'identifier' => 'user-menu_leaderboard:leaderboard',
+      'attributes' => array(),
     ),
     'module' => 'system',
     'hidden' => 0,
@@ -52,13 +53,15 @@ function thuli_core_features_menu_default_menu_links() {
     'link_title' => 'Log out',
     'options' => array(
       'identifier' => 'user-menu_log-out:user/logout',
+      'html' => 1,
+      'attributes' => array(),
     ),
     'module' => 'system',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -43,
+    'weight' => -44,
     'customized' => 1,
   );
   // Exported menu link: user-menu_manage-thulis:thulis/manage
@@ -112,22 +115,23 @@ function thuli_core_features_menu_default_menu_links() {
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: user-menu_post-a-thuli:node/add/thuli
-  $menu_links['user-menu_post-a-thuli:node/add/thuli'] = array(
+  // Exported menu link: user-menu_span-classglyphicon-glyphicon-editspan-post-a-thuli:node/add/thuli
+  $menu_links['user-menu_span-classglyphicon-glyphicon-editspan-post-a-thuli:node/add/thuli'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'node/add/thuli',
     'router_path' => 'node/add/thuli',
-    'link_title' => 'Post a Thuli',
+    'link_title' => '<span class="glyphicon glyphicon-edit"></span> Post a Thuli',
     'options' => array(
+      'identifier' => 'user-menu_span-classglyphicon-glyphicon-editspan-post-a-thuli:node/add/thuli',
       'attributes' => array(),
-      'identifier' => 'user-menu_post-a-thuli:node/add/thuli',
+      'html' => 1,
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -44,
+    'weight' => -43,
     'customized' => 1,
   );
   // Exported menu link: user-menu_user-account:user
@@ -150,13 +154,13 @@ function thuli_core_features_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
+  t('<span class="glyphicon glyphicon-edit"></span> Post a Thuli');
   t('Explore Thulis');
   t('Leaderboard');
   t('Log out');
   t('Manage Thulis');
   t('My !points');
   t('My Thulis');
-  t('Post a Thuli');
   t('User account');
 
 

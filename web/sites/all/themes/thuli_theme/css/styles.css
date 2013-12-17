@@ -35,6 +35,7 @@
     top: 20px;
 }
 
+#admin-menu,
 #admin-menu .dropdown {
     z-index: 1031;
 }
@@ -42,4 +43,13 @@
 #admin-menu .dropdown .admin-menu-icon img {
     height: 16px;
     width: 16px;
+}
+
+.form-type-textfield .description,
+.form-type-password .description {
+    display: none;
+}
+
+ul.nav-tabs {
+    margin-top: 1em;
 }

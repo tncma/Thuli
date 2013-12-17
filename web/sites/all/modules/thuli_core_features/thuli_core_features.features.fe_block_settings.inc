@@ -130,8 +130,8 @@ function thuli_core_features_default_fe_block_settings() {
         'weight' => 10,
       ),
       'zen' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'footer',
+        'status' => 1,
         'theme' => 'zen',
         'weight' => 10,
       ),

@@ -392,10 +392,10 @@ function thuli_core_features_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'account' => array(
-          'weight' => '0',
+          'weight' => '2',
         ),
         'timezone' => array(
-          'weight' => '1',
+          'weight' => '3',
         ),
       ),
       'display' => array(

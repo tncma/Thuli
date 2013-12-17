@@ -444,7 +444,7 @@ function thuli_core_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 1,
     ),
   );
 
@@ -479,7 +479,7 @@ function thuli_core_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 0,
     ),
   );
 
